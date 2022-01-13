@@ -139,7 +139,7 @@
             </div>
         </section>
         <section>
-            <h2>Extras</h2>
+            <h2>Extras TODO: inline list (list-style-type:inside?</h2>
             <ol>
                 ${$reportData.extras
                   .split("\n")
@@ -151,7 +151,8 @@
         <section>
             <h2>Members</h2>
             <div class="grid col2 gap1">
-                ${$reportData.members
+                ${[...$reportData.members]
+                  .sort((a, b) => a.examTime > b.examTime)
                   .map((member) => {
                     return `
                         <article>

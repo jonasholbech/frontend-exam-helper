@@ -18,4 +18,5 @@
   <Dragger cat="UX" {site} />
   <Dragger cat="responsiveness" {site} />
   <Dragger cat="feel factor" {site} />
+  <Dragger cat="tech stack and code notes" {site} />
 </details>

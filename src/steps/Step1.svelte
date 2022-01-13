@@ -6,6 +6,7 @@
   }
 </script>
 
+<button on:click={() => localStorage.clear()}>Clear Storage</button>
 <form on:submit|preventDefault={submit}>
   <label>
     Group #
