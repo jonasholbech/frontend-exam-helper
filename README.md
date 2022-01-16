@@ -10,8 +10,12 @@ _Looking for a shareable component template instead? You can [use SvelteKit for 
 - clear localStorage (reset UI)
 - hvor kan jeg skrive noter til koden? (notes component?)
 - søg efter todo og fjern
-- store json object to be able to recreate the report?
-- kan gå til step 5 uden ex extras, skal man kunne det?
+- store json object to be able to recreate the report? (load report)
+- kan ikke gå til step 5 uden ex extras, skal man kunne det?
+- fetch commit count + branch count from github - https://stackoverflow.com/questions/57583064/how-can-i-get-branch-count-on-a-repository-via-github-api
+- (seems terrible, maybe just fetch the site and parse it?)
+- warning if extras < num members
+- ARGHHH who worked on what er ikke med i output
 
 Navigate to [localhost:8080](http://localhost:8080). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
 
