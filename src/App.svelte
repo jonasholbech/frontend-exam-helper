@@ -10,7 +10,7 @@
 </script>
 
 <main class="container">
-  <h1>At step {$step}/5</h1>
+  <h1>At step {$step} out of 5</h1>
 
   {#if $step === 1}
     <Step1 />
