@@ -158,10 +158,6 @@
                         <article>
                             <h3>${member.name}</h3>
                             <p>${member.examDate} - ${member.examTime}</p>
-                            <div>
-                                <h4>Worked on</h4>
-                                ${member.tasks}  
-                            </div>
                             <dl>
                                 <dt>Screencast</dt>
                                 <dd><a href="${
