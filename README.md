@@ -15,7 +15,7 @@ _Looking for a shareable component template instead? You can [use SvelteKit for 
 - fetch commit count + branch count from github - https://stackoverflow.com/questions/57583064/how-can-i-get-branch-count-on-a-repository-via-github-api
 - (seems terrible, maybe just fetch the site and parse it?)
 - warning if extras < num members
-- ARGHHH who worked on what er ikke med i output
+- meta generator i head :-) https://jonasholbech.github.io/frontend-exam-helper/
 
 Navigate to [localhost:8080](http://localhost:8080). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
 
