@@ -29,14 +29,16 @@
             <div class="grid gap1 col2">
                 <ul>
                     
-                    <li><a href="${$reportData.links.form}">Form</a></li>
+                    <li><a href="${
+                      $reportData.links.form
+                    }">Form/Booking</a></li>
                     <li><a href="${$reportData.links.formGH}">GitHub</a></li>
                 </ul>
                 <ul>
                     
                     <li><a href="${
                       $reportData.links.dashboard
-                    }">Dashboard</a></li>
+                    }">Dashboard/App</a></li>
                     <li><a href="${
                       $reportData.links.dashboardGH
                     }">GitHub</a></li>

@@ -16,6 +16,7 @@
   });
 </script>
 
+<p>TODO: git notes</p>
 <TargetAudience />
 <WhoDidWhat />
 <Screencasts />

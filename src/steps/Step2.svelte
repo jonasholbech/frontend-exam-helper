@@ -14,11 +14,11 @@
   <fieldset>
     <legend>Links</legend>
     <label>
-      Form link
+      Form/Booking link
       <input type="url" bind:value={$reportData.links.form} required />
     </label>
     <label>
-      Dashboard link
+      Dashboard/App link
       <input type="url" bind:value={$reportData.links.dashboard} required />
     </label>
   </fieldset>
@@ -29,12 +29,12 @@
       <input type="checkbox" bind:checked={isMonoRepo} />
     </label>
     <label>
-      Form GitHub
+      Form/Booking GitHub
       <input type="url" bind:value={$reportData.links.formGH} required />
     </label>
     {#if !isMonoRepo}
       <label>
-        Dashboard GitHub
+        Dashboard/App GitHub
         <input type="url" bind:value={$reportData.links.dashboardGH} required />
       </label>
     {/if}
