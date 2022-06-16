@@ -26,6 +26,8 @@ const initialData = {
     dashboard: "",
     formGH: "",
     dashboardGH: "",
+    formNotes: "",
+    dashboardNotes: "",
   },
   form: {
     works: { comment: null, grade: null },

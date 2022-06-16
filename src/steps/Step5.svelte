@@ -7,6 +7,8 @@
     }
     return string.replace(/\n/g, "<br />");
   }
+  //TODO: gh notes ind i rapport
+  //TODO: import data from report (json object stored in the html (in details>summary?))
   const template = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +48,7 @@
             </div>
         </section>
         <section class="grid col2 gap1">
-            <div>
+            <div class="bordered">
                 <h2>The form</h2>
                 <table>
                     <tr>
@@ -84,9 +86,15 @@
                         )}</td>
                     </tr>
                 </table>
+                <h3>Github</h3>
+                ${$reportData.links.formNotes
+                  .split("\n")
+                  .map((extra) => `<p>${extra}</p>`)
+                  .join("")}
             </div>
-            <div>
-                <h2>The Dashboard (${$reportData.targetAudience})</h2>
+            <div  class="bordered">
+                <h2>The Dashboard/App</h2>
+                <p>${$reportData.targetAudience}</p>
                 <table>
                     <tr>
                         <th>Name</th><th>Value</th><th>Comments</th>
@@ -125,6 +133,11 @@
                         )}</td>
                     </tr>
                 </table>
+                <h3>Github</h3>
+                ${$reportData.links.dashboardNotes
+                  .split("\n")
+                  .map((extra) => `<p>${extra}</p>`)
+                  .join("")}
             </div>
         </section>
         <section>
@@ -141,7 +154,7 @@
             </div>
         </section>
         <section>
-            <h2>Extras TODO: inline list (list-style-type:inside?</h2>
+            <h2>Extras</h2>
             <ol>
                 ${$reportData.extras
                   .split("\n")
@@ -211,6 +224,7 @@
         }
         .col2 {
             grid-template-columns: 1fr 1fr;
+            
         }
         .gap1 {
             gap:1rem;
@@ -221,7 +235,15 @@
         .full {
             grid-column: 1/-1;
         }
+        .bordered {
+            border: 1px solid #FFF;
+            padding:1rem;
+        }
     </style>
+    <details>
+        <summary>data</summary>
+        ${JSON.stringify($reportData)}
+    </details>
 </body>
 </html>`;
   download(

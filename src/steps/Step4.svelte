@@ -12,11 +12,10 @@
   import OtherQuestions from "./components/OtherQuestions.svelte";
 
   onMount(() => {
-    autoExpandTextarea();
+    setTimeout(autoExpandTextarea, 200);
   });
 </script>
 
-<p>TODO: git notes</p>
 <TargetAudience />
 <WhoDidWhat />
 <Screencasts />

@@ -1,4 +1,6 @@
 <script>
+  import { onMount } from "svelte";
+  import { autoExpandTextarea } from "../modules/autoExpander";
   import { reportData } from "../stores/reportData";
   import { step } from "../stores/step";
   let isMonoRepo = false;
@@ -8,6 +10,10 @@
     }
     step.next();
   }
+  console.log($reportData.links);
+  onMount(() => {
+    autoExpandTextarea();
+  });
 </script>
 
 <form on:submit|preventDefault={submit}>
@@ -32,10 +38,18 @@
       Form/Booking GitHub
       <input type="url" bind:value={$reportData.links.formGH} required />
     </label>
+    <label
+      >Notes
+      <textarea bind:value={$reportData.links.formNotes} />
+    </label>
     {#if !isMonoRepo}
       <label>
         Dashboard/App GitHub
         <input type="url" bind:value={$reportData.links.dashboardGH} required />
+      </label>
+      <label
+        >Notes
+        <textarea bind:value={$reportData.links.dashboardNotes} />
       </label>
     {/if}
   </fieldset>
