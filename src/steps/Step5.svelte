@@ -10,7 +10,7 @@
   //TODO: gh notes ind i rapport
   //TODO: import data from report (json object stored in the html (in details>summary?))
   const template = `<!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
