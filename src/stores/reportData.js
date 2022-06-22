@@ -5,6 +5,7 @@ const initialData = {
   group_number: null,
   group_name: "",
   numMembers: 2,
+  isMonoRepo: false,
   members: [
     {
       name: "",

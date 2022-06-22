@@ -31,20 +31,21 @@
             <div class="grid gap1 col2">
                 <ul>
                     
-                    <li><a href="${
+                    <li><a target="_blank" href="${
                       $reportData.links.form
                     }">Form/Booking</a></li>
-                    <li><a href="${$reportData.links.formGH}">GitHub</a></li>
-                </ul>
-                <ul>
-                    
-                    <li><a href="${
-                      $reportData.links.dashboard
-                    }">Dashboard/App</a></li>
-                    <li><a href="${
-                      $reportData.links.dashboardGH
+                    <li><a target="_blank" href="${
+                      $reportData.links.formGH
                     }">GitHub</a></li>
                 </ul>
+                ${
+                  $reportData.isMonoRepo
+                    ? ""
+                    : `<ul>
+                    <li><a target="_blank" href="${$reportData.links.dashboard}">Dashboard/App</a></li>
+                    <li><a target="_blank" href="${$reportData.links.dashboardGH}">GitHub</a></li>
+                </ul>`
+                }
             </div>
         </section>
         <section class="grid col2 gap1">
@@ -224,7 +225,11 @@
         }
         .col2 {
             grid-template-columns: 1fr 1fr;
-            
+        }
+        @media only screen and (max-width: 960px) {
+            .col2 {
+                grid-template-columns: 1fr;
+            }
         }
         .gap1 {
             gap:1rem;
@@ -244,6 +249,7 @@
         <summary>data</summary>
         ${JSON.stringify($reportData)}
     </details>
+    
 </body>
 </html>`;
   download(

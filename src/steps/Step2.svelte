@@ -3,9 +3,9 @@
   import { autoExpandTextarea } from "../modules/autoExpander";
   import { reportData } from "../stores/reportData";
   import { step } from "../stores/step";
-  let isMonoRepo = false;
+  //let isMonoRepo = false;
   function submit() {
-    if (isMonoRepo) {
+    if ($reportData.isMonoRepo) {
       $reportData.links.dashboardGH = $reportData.links.formGH;
     }
     step.next();
@@ -32,7 +32,7 @@
     <legend>GitHub</legend>
     <label
       >Mono-repo?
-      <input type="checkbox" bind:checked={isMonoRepo} />
+      <input type="checkbox" bind:checked={$reportData.isMonoRepo} />
     </label>
     <label>
       Form/Booking GitHub
@@ -42,7 +42,7 @@
       >Notes
       <textarea bind:value={$reportData.links.formNotes} />
     </label>
-    {#if !isMonoRepo}
+    {#if !$reportData.isMonoRepo}
       <label>
         Dashboard/App GitHub
         <input type="url" bind:value={$reportData.links.dashboardGH} required />
