@@ -1,5 +1,5 @@
 .completed > summary {
-  color: grey;
+  color: grey !important;
 }
 
 details:not(.completed) > summary:not(:focus),
