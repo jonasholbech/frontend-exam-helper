@@ -13,6 +13,11 @@
 
 <details class:completed>
   <summary>{site.charAt(0).toUpperCase() + site.slice(1)}</summary>
+  <p>
+    <a href={$reportData.links[site]} target="_blank"
+      >{$reportData.links[site]}</a
+    >
+  </p>
   <Dragger cat="works" {site} />
   <Dragger cat="looks good" {site} />
   <Dragger cat="UX" {site} />
