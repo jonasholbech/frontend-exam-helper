@@ -11,18 +11,20 @@
   import ExamOrder from "./components/ExamOrder.svelte";
   import OtherQuestions from "./components/OtherQuestions.svelte";
 
+  import FloatMenu from "../FloatMenu.svelte";
   onMount(() => {
     setTimeout(autoExpandTextarea, 200);
   });
 </script>
 
+<FloatMenu />
+<ExamOrder />
+<Report />
 <TargetAudience />
 <WhoDidWhat />
-<Screencasts />
 <Extras />
+<Screencasts />
 <Site site="form" />
 <Site site="dashboard" />
-<Report />
-<ExamOrder />
 <OtherQuestions />
 <button on:click={() => step.next()}>Generate Exam Helper</button>

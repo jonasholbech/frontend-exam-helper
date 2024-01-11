@@ -11,7 +11,7 @@
   }
 </script>
 
-<details class:completed>
+<details class:completed id={site.charAt(0).toUpperCase() + site.slice(1)}>
   <summary>{site.charAt(0).toUpperCase() + site.slice(1)}</summary>
   <p>
     <a href={$reportData.links[site]} target="_blank"

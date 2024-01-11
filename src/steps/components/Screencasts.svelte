@@ -8,10 +8,12 @@
   );
 </script>
 
-<details class:completed={allMembersSeen}>
+<details class:completed={allMembersSeen} id="Screencasts">
   <summary>Screencasts</summary>
   {#each $reportData.members as member}
-    <p>{member.name} - <a href={member.screencast} target="_blank">Watch</a></p>
+    <p>
+      {member.name} - <a href={member.screencast} target="_blank">Watch</a>
+    </p>
     <label>
       Notes
       <textarea bind:value={member.screencastNotes} placeholder="Notes" />

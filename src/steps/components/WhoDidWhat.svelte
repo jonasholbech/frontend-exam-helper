@@ -5,7 +5,7 @@
   );
 </script>
 
-<details class:completed={allMembersHasTasks}>
+<details class:completed={allMembersHasTasks} id="WhoDidWhat">
   <summary>Who did what?</summary>
   {#each $reportData.members as member}
     <label>

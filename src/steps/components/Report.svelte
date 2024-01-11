@@ -6,7 +6,7 @@
     $reportData.report.questions !== "";
 </script>
 
-<details class:completed={isCompleted}>
+<details class:completed={isCompleted} id="Report">
   <summary>Report</summary>
   <label>
     Good stuff

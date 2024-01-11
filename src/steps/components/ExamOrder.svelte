@@ -5,7 +5,7 @@
   );
 </script>
 
-<details class:completed={allMembersAdded}>
+<details class:completed={allMembersAdded} id="ExamOrder">
   <summary>Exam Order</summary>
   <p>Time for each</p>
   {#each $reportData.members as member}

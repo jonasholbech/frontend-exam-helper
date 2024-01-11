@@ -6,7 +6,7 @@
       $reportData.members.length;
 </script>
 
-<details class:completed={correctAmountOfExtras}>
+<details class:completed={correctAmountOfExtras} id="Extras">
   <summary>Extras</summary>
   <textarea bind:value={$reportData.extras} />
 </details>
