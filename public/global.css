@@ -18,3 +18,6 @@ label {
 textarea {
   min-block-size: 4rem;
 }
+.container:has(nav) > *:not(nav) {
+  margin-left: 120px;
+}
